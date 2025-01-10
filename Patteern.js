@@ -1,13 +1,7 @@
 // Number of rows and columns
-const rows = 5;
-const columns = 5;
-
-// Loop through rows
-for (let i = 0; i < rows; i++) {
-    let pattern = "";
-    // Loop through columns
-    for (let j = 0; j < columns; j++) {
-        pattern += "* ";
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=5;j++){
+        document.writeln("*")
     }
-    console.log(pattern); // Print each row
+    document.writeln("<br>")
 }

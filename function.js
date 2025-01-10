@@ -1,46 +1,30 @@
-//!function
-function userDetails(name , age , city){
-    console.log(name);
-    console.log(age);
-    console.log(city);
-
-    
-}
-userDetails("srinija" , 20 , "hyd");
-
-//! function expression
-let b = function(){
-    console.log("function expression is execting");
+// 
+function demo(a,b){
+  return a+b;
 };
-b();
+function demo(a,b){
+  console.log("hi");
+  console.log("good morning");
 
-//! IIFE
-(function(){
-    console.log("IIFE");
-})();
+  return a+b
+};
 
-//! Arrow function
-//used to consise the norma; function syntax
-//similar to ananymous function
-let a = ()=>console.log("Arrow functional");
-a();
+function hof(a){
+  return a;
+};
+// let x=hof(function(){return "hello iam a callback function"});
+// console.log(x);
+// x();
+ var a=100;
+ let b= "hi";
+function x(){
+  var user= "srinija";
+  let company="google";
+  const sal=5478963;
+  console.log(user);
+  console.log(company);
+  console.log(sal);
+  console.log(a,b);
 
-let y =(a , b)=>console.log(a+b);
-y(5);
-
-let x=_=>{console.log("Hi");
-        console.log("hello");
-        console.log("bye");}
-x();          
-
-
-//******
-const rows = 5;
-const columns = 6;
-for (let i = 0; i < rows; i++) {
-  let row = "";
-  for (let j = 0; j < columns; j++) {
-    row += "*   "; 
-  }
-
-  console.log(row.trim()); }
+}
+x();
