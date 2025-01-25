@@ -17,13 +17,31 @@
 // btn.addEventListener("dblclick",()=>{
 //     console.log("double clicked");
 // })
-let divBlock=document.getElementById("divBlock");
-divBlock.addEventListener("mouseover",()=>{
-    document.body.style.backgroundColor="yellow";
-    divBlock.style.backgroundColor="blue"
+// let divBlock=document.getElementById("divBlock");
+// divBlock.addEventListener("mouseover",()=>{
+//     document.body.style.backgroundColor="yellow";
+//     divBlock.style.backgroundColor="blue"
     
-});
-divBlock.addEventListener("mouseleave",()=>{
-    document.body.style.backgroundColor="orange"
-    divBlock.style.backgroundColor="aqua"
+// });
+// divBlock.addEventListener("mouseleave",()=>{
+//     document.body.style.backgroundColor="orange"
+//     divBlock.style.backgroundColor="aqua"
+// })
+
+
+let form=document.querySelector("form");
+let username=document.getElementById("uName");
+let mail=document.getElementById("uMail");
+let password=document.getElementById("uPass");
+form.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    let uname=username.value;
+    let uemail=mail.value;
+    let upass=password.value;
+    let userDetails={
+        uname, uemail, upass
+    }
+    console.log(userDetails);
+    localStorage.setItem("userData" , JSON.stringify(userDetails))
 })
+
