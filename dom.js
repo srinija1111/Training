@@ -29,19 +29,48 @@
 // })
 
 
-let form=document.querySelector("form");
-let username=document.getElementById("uName");
-let mail=document.getElementById("uMail");
-let password=document.getElementById("uPass");
-form.addEventListener("submit",(event)=>{
-    event.preventDefault();
-    let uname=username.value;
-    let uemail=mail.value;
-    let upass=password.value;
-    let userDetails={
-        uname, uemail, upass
-    }
-    console.log(userDetails);
-    localStorage.setItem("userData" , JSON.stringify(userDetails))
-})
+// let form=document.querySelector("form");
+// let username=document.getElementById("uName");
+// let mail=document.getElementById("uMail");
+// let password=document.getElementById("uPass");
+// form.addEventListener("submit",(event)=>{
+//     event.preventDefault();
+//     let uname=username.value;
+//     let uemail=mail.value;
+//     let upass=password.value;
+//     let userDetails={
+//         uname, uemail, upass
+//     }
+//     console.log(userDetails);
+//     localStorage.setItem("userData" , JSON.stringify(userDetails))
+// })
+let mainEle=document.createElement("div");
+mainEle.setAttribute("id", "mainBlock");
+mainEle.style.border="2px solid red";
+mainEle.style.width="550px";
+mainEle.style.height="550px";
+console.log(mainEle);
+let topEle=document.createElement("div");
+topEle.setAttribute("class", "topBlock");
+let image=document.createElement("img");
+image.src="http://cdn.pixabay.com/photo/2023/02/09/16/43/cat-7779237_640.jpg";
+image.style.width="550px";
+let bottomEle=document.createElement("div");
+bottomEle.setAttribute("class", "bottomBlock");
+let h1=document.createElement("h1");
+h1.innerText="CAT";
+h1.style.textAlign="centre"
+let btn=document.createElement("button");
+btn.innerText="view More";
+btn.style.border="none";
+btn.style.padding="20px";
+btn.style.backgroundColor="doderblue";
+btn.style.color="white";
+bottomEle=appendChild(h1);
+bottomEle=appendChild(btn);
+
+topEle.appendChild(image);
+mainEle.appendChild(topEle);
+mainEle.appendChild(bottomEle);
+document.body.appendChild(mainEle);
 
